@@ -15,20 +15,20 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int binary_search(void *A, void *elem, size_t s, int low, int high, int compare(void *, void *)){
 	int middle = low + (high - low) / 2;
 	int comp = compare(elem, (void *) ((char *)A + s * middle));
 
-	//element not found
-	if (low + 1 == high){
+	if (high >= low){
+		if (comp == 0)
+			return middle;
+		else if (comp > 0)
+			return binary_search(A, elem, s, middle + 1, high, compare);
+		else
+			return binary_search(A, elem, s, low, middle - 1, compare);
+	}else{ //element not found
 		return -1;
 	}
-
-	if (comp == 0)
-		return middle;
-	else if (comp > 0)
-		return binary_search(A, elem, s, middle, high, compare);
-	else
-		return binary_search(A, elem, s, low, middle, compare);
 }

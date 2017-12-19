@@ -32,12 +32,14 @@ int main(){
 		A[i] = 3*i;
 	}
 
-	int n = 555;
-	int ind = binary_search(A, &n, sizeof(int), 0, N, compareInt);
+	for (int n = 0; n < 1000; n++){	
+		int ind = binary_search(A, &n, sizeof(int), 0, N, compareInt);
+	
+		if (ind == -1)
+			printf("Element %d does not exist in array.\n", n);
+		else
+			printf("Found element %d at position %d.\n", n, ind);
+	}
 
-	if (ind == -1)
-		printf("Element %d does not exist in array.\n", n);
-	else
-		printf("Found element %d at position %d.\n", n, ind);
 	return 0;
 }
