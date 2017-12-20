@@ -19,7 +19,7 @@
 
 #define N 1000000
 
-int compareInt(void *a, void *b){
+int compareInt(const void *a, const void *b){
 	int n1 = *(int *)a;
 	int n2 = *(int *)b;
 	return n1 - n2;

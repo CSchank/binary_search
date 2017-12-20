@@ -14,4 +14,4 @@
  * APPLICATION THEREOF
  */
 
-int binary_search(void *A, void *elem, size_t s, int low, int high, int compare(void *, void *));
+int binary_search(void *A, void *elem, size_t s, int low, int high, int compare(const void *, const void *));

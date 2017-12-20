@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int binary_search(void *A, void *elem, size_t s, int low, int high, int compare(void *, void *)){
+int binary_search(void *A, void *elem, size_t s, int low, int high, int compare(const void *, const void *)){
 	int middle = low + (high - low) / 2;
 	int comp = compare(elem, (void *) ((char *)A + s * middle));
 
