@@ -3,7 +3,7 @@
  * You must supply a compare() function using void pointers.
  *
  * Author: Christopher W. Schankula
- * Last updated: December 19th, 2017
+ * Last updated: December 20th, 2017
  * Code is licensed under the CC BY 4.0 license.
  *
  * THE CODE PROVIDED HEREIN IS PROVIDED "AS-IS"
